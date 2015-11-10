@@ -6,4 +6,4 @@ RUN apt-get -y build-dep build-essential
 RUN apt-get install -y python python-dev python-distribute
 RUN python scripts/get-pip.py
 RUN apt-get -y install git
-COPY test_script.sh scripts/test_script.sh
+COPY run_server.sh scripts/run_server.sh
