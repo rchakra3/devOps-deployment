@@ -1,5 +1,3 @@
 #!/bin/bash
-docker stop flask-app
-docker rm flask-app
-docker run -it -d --name flask-app -p 49200:5000 python-base sh scripts/run_server.sh $1
+docker run -it -d --name $1 -p $2:5000 --link redis_ambassador:redis python-base sh scripts/run_server.sh $3
 
